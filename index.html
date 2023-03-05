@@ -13,7 +13,7 @@
                     author: "Barbara Bush"
                 }
             ];
-            
+
             window.onload = init;
             function init() {
                 generateQuote()
@@ -24,8 +24,8 @@
                 let randomIndex = Math.floor(Math.random() * quoteSize);
                 let randomQuoteData = QUOTEBANK[randomIndex];
 
-            document.getElementById("text").innerText = QUOTEBANK[2].quote;
-            document.getElementById("author").innerText = QUOTEBANK[2].author;
+            document.getElementById("text").innerText = randomQuoteData.quote;
+            document.getElementById("author").innerText = randomQuoteData.author;
             }
         </script>
 
@@ -41,11 +41,9 @@
         <wrapper id="quote-box">
             <div id="text"></div>
             <div id="author"></div>
-            <button id="new-quote" onClick="generateQuote()" >New Quote</button>
+            <button id="new-quote" onClick="generateQuote();" >New Quote</button>
             <a id="tweet-quote">Tweet Quote</a>
         </wrapper>
-        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
-
-        </script>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </body>
 </html>
