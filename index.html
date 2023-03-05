@@ -23,7 +23,10 @@
                 let quoteSize = QUOTEBANK.length;
                 let randomIndex = Math.floor(Math.random() * quoteSize);
                 let randomQuoteData = QUOTEBANK[randomIndex];
+                
+                let twitterlink = "https://twitter.com/intent/tweet?hashtags=quotes&amp&text=%22A%20truly%20rich%20man%20is%20one%20whose%20children%20run%20into%20his%20arms%20when%20his%20hands%20are%20empty.%22%20Unknown"
 
+            document.getElementById("tweet-quote").href = twitterlink;    
             document.getElementById("text").innerText = randomQuoteData.quote;
             document.getElementById("author").innerText = randomQuoteData.author;
             }
@@ -31,7 +34,11 @@
 
         <style>
             * {
-               font-size: 2rem; 
+               font-size: 1.5rem;
+               padding: 20px 20px 20px 20px; 
+               color: brown;
+               background-color: bisque;
+               font-weight: bold;
             }
         </style>
 
@@ -42,7 +49,7 @@
             <div id="text"></div>
             <div id="author"></div>
             <button id="new-quote" onClick="generateQuote();" >New Quote</button>
-            <a id="tweet-quote">Tweet Quote</a>
+            <a href="#" target="_blank" id="tweet-quote">Tweet Quote</a>
         </wrapper>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </body>
