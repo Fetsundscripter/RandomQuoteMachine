@@ -13,15 +13,19 @@
                     author: "Barbara Bush"
                 }
             ];
+            
             window.onload = init;
             function init() {
                 generateQuote()
             }
 
             function generateQuote() {
-                console.log("Quote Generated")
-            document.getElementById("text").innerText = "Useful Programmer";
-            document.getElementById("author").innerText = "The Author";
+                let quoteSize = QUOTEBANK.length;
+                let randomIndex = Math.floor(Math.random() * quoteSize);
+                let randomQuoteData = QUOTEBANK[randomIndex];
+
+            document.getElementById("text").innerText = QUOTEBANK[2].quote;
+            document.getElementById("author").innerText = QUOTEBANK[2].author;
             }
         </script>
 
